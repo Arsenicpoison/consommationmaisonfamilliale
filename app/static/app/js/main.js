@@ -5,7 +5,7 @@ $(function() {
         category_id = $(this).val();
         // alert(category_id);
         $.get(
-            "/previsions/getProducts", {
+            "/acheter/getProducts", {
                 category_id: category_id,
             },
             function(data) {
@@ -20,7 +20,7 @@ $(function() {
     $("#id_product").on("change", function() {
         id_product = $(this).val();
         $.get(
-            "/previsions/getUnitPrice", {
+            "/acheter/getUnitPrice", {
                 id_product: id_product,
             },
             function(data) {
