@@ -38,8 +38,8 @@ urlpatterns = [
     path('previsions/add', previsions.add, name='previsions_add'),
     path('previsions/store', previsions.store, name='previsions_store'),
     path('previsions/update/<int:id>', previsions.update, name="previsions_update"),
-    path('orders/getProducts', previsions.getProducts, name='getProducts'),
-    path('orders/getUnitPrice', previsions.getUnitPrice, name='getUnitPrice'),
+    path('previsions/getProducts', previsions.getProducts, name='getProducts'),
+    path('previsions/getUnitPrice', previsions.getUnitPrice, name='getUnitPrice'),
     path('previsions/edit/<int:id>', previsions.edit, name='previsions_edit'),
     path('previsions/delete/<int:id>', previsions.delete, name='previsions_delete'),
 
