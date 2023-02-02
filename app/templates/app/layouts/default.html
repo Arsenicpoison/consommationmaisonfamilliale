@@ -52,6 +52,7 @@
         Scripts
     ***********************************-->
     {% load static %}
+
     <script src="{% static 'app/plugins/common/common.min.js' %}"></script>
     <script src="{% static 'app/js/custom.min.js' %}"></script>
     <script src="{% static 'app/js/settings.js' %}"></script>
@@ -78,8 +79,11 @@
 
 
 
+    <script src="{% static 'app/js/main.js' %}"></script>
     <script src="{% static 'app/js/dashboard/dashboard-1.js' %}"></script>
-    {% block script %}{% endblock %}
+
+
+    {% comment %} {% block scripts %}{% endblock %} {% endcomment %}
 </body>
 
 </html>
