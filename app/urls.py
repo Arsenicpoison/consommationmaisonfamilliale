@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.urls import path
-from app.views import home,categories,products
+from app.views import home,categories,products,previsions
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -33,4 +33,13 @@ urlpatterns = [
     path('products/update/<int:id>', products.update, name="products_update"),
     path('products/edit/<int:id>', products.edit, name='products_edit'),
     path('products/delete/<int:id>', products.delete, name='products_delete'),
+
+     path('previsions/', previsions.index, name='previsions_index'),
+    path('previsions/add', previsions.add, name='previsions_add'),
+    path('previsions/store', previsions.store, name='previsions_store'),
+    path('previsions/update/<int:id>', previsions.update, name="previsions_update"),
+    path('orders/getProducts', previsions.getProducts, name='getProducts'),
+    path('orders/getUnitPrice', previsions.getUnitPrice, name='getUnitPrice'),
+    path('previsions/edit/<int:id>', previsions.edit, name='previsions_edit'),
+    path('previsions/delete/<int:id>', previsions.delete, name='previsions_delete'),
 ]
