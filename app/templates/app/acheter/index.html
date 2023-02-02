@@ -74,13 +74,13 @@
 
                                           <td>
                                             <form
-                                              action="{% url 'previsions_delete' achat.id %}"
+                                              action="{% url 'acheter_delete' achat.id %}"
                                               method="post"
                                             >
                                               {% csrf_token %}
                                               <button
                                                 type="submit"
-                                                onclick="return confirm('Do you want really to delete this borrow ?')"
+                                                onclick="return confirm('voulez vous vraiment supprimer cet achat ?')"
                                                 class="btn btn-danger"
                                               >
                                                 Delete
