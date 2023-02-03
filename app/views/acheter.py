@@ -78,7 +78,7 @@ def edit(request, id):
                 form = AcheterForm(request.POST, instance=acheter)
             if form.is_valid():
                 form.save()
-                messages.success(request, "prevision has been updated successfully !")
+                messages.success(request, "achat a ete modifier avec success!")
             return redirect('/acheter')
     else:
         acheter = Acheter.objects.get(pk=id)
@@ -93,7 +93,7 @@ def edit(request, id):
 def delete(request, id):
     acheter = Acheter.objects.get(pk=id)
     acheter.delete()
-    messages.success(request, "Achat has been removed successfully !")
+    messages.success(request, "achat a été supprimé avec success! !")
     return redirect('/acheter')
 
 def store(request):
@@ -101,5 +101,5 @@ def store(request):
         form = AcheterForm(request.POST)
         if form.is_valid():
             form.save()
-        messages.success(request, "Achat has been saved successfully !")
+        messages.success(request, "achat a été enregistré avec success!!")
         return redirect('/acheter')

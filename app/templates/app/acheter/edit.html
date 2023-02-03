@@ -22,7 +22,7 @@
                     </div>
                     <div class="card-body">
                         <!-- Vertical Form -->
-                        <form action="{% url 'previsions_update' form.instance.pk %}" method="post">
+                        <form action="{% url 'acheter_update' form.instance.pk %}" method="post">
                             {% csrf_token %}
                             <div class="col-12">
                                 {{ form.category|as_crispy_field }}
