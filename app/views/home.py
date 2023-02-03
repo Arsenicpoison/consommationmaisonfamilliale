@@ -7,6 +7,9 @@ def index(request):
     total_acheter=Acheter.objects.count()
     total=totalModel1(Prevision.objects.all())
     totale =totalModel2(Acheter.objects.all())
+    previsions = Prevision.objects.all()
+    acheter = Acheter.objects.all()
+    
     return render(
         request,
         'app/home/index.html',
@@ -14,7 +17,9 @@ def index(request):
             'total_prevision': total_prevision,
             'total_acheter':total_acheter,
             'total': total,
-            'totale': totale
+            'totale': totale,
+            'previsions': previsions,
+            'acheter': acheter
 
         }
     )
