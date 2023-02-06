@@ -6,5 +6,5 @@ class Prevision(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField()
-    date_achat = models.DateTimeField(default=datetime.datetime.now)
+    date_achat = models.DateTimeField()
     total = models.FloatField()
